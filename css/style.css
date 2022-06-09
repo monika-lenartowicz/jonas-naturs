@@ -37,6 +37,7 @@ Dark green: #28b485
 	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	text-align: center;
 }
 
 .logo-box {
@@ -53,6 +54,7 @@ Dark green: #28b485
 	color: #fff;
 	text-transform: uppercase;
 	backface-visibility: hidden;
+	margin-bottom: 60px;
 }
 
 .heading-primery-main {
@@ -101,4 +103,29 @@ Dark green: #28b485
 		opacity: 1;
 		transform: translate(0);
 	}
+}
+
+.button:link,
+.button:visited {
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 100px;
+	transition: all 0.3s;
+}
+
+.button:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+	transform: translateY(-1px);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-white {
+	display: inline-block;
+	color: #777;
+	background-color: #fff;
+	padding: 15px 40px;
 }
