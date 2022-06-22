@@ -1,0 +1,11 @@
+.row {
+	max-width: $grid-width;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: $gutter-vertical;
+
+	&:not(:last-child) {
+		margin-bottom: $gutter-horizontal;
+	}
+}
