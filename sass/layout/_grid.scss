@@ -5,20 +5,45 @@
 
 	&:not(:last-child) {
 		margin-bottom: $gutter-horizontal;
+
+		@include respond(tab-land) {
+			margin-bottom: $gutter-vertical-small;
+		}
 	}
 
-	&.col-1-of-2 {
-		grid-template-columns: 1fr 1fr;
-		column-gap: $gutter-vertical;
+	@include respond(tab-land) {
+		max-width: 100rem;
+		padding: 3rem;
 	}
+}
 
-	&.col-1-of-3 {
-		grid-template-columns: repeat(3, 1fr);
-		column-gap: $gutter-horizontal;
+.col-1-of-2 {
+	grid-template-columns: 1fr 1fr;
+	column-gap: $gutter-vertical;
+
+	@include respond(tab-land) {
+		grid-template-columns: 1fr;
+		column-gap: $gutter-vertical-small;
 	}
+}
 
-	&.col-1-of-4 {
-		grid-template-columns: repeat(4, 1fr);
-		column-gap: $gutter-horizontal;
+.col-1-of-3 {
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: $gutter-horizontal;
+
+	@include respond(tab-land) {
+		grid-template-columns: 1fr;
+		column-gap: $gutter-horizontal-small;
+		row-gap: $gutter-horizontal-medium;
+	}
+}
+
+.col-1-of-4 {
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: $gutter-horizontal;
+
+	@include respond(tab-land) {
+		grid-template-columns: 1fr;
+		row-gap: $gutter-horizontal;
 	}
 }
